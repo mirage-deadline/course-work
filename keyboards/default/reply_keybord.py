@@ -2,7 +2,8 @@ from aiogram.types import ReplyKeyboardRemove, ReplyKeyboardMarkup, KeyboardButt
 
 
 def help_keybord():
-    markup = ReplyKeyboardMarkup(resize_keyboard=True)
+    markup = ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
     buttons = KeyboardButton('/predict')
-    markup = markup.add(buttons)
+    buttons_2 = KeyboardButton('/start')
+    markup = markup.add(buttons_2, buttons)
     return markup
